@@ -86,7 +86,7 @@ body:
       required: true
 
   - type: input
-    id: environment-gemini-bridge
+    id: environment-gemini-mcp-bridge
     attributes:
       label: Gemini Bridge Version
       description: What version of Gemini Bridge are you using?

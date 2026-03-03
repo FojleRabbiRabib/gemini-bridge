@@ -215,7 +215,7 @@ def _prepare_inline_payload(directory: str, files: list[str]) -> tuple[str, list
 
         block_header = f"=== {display_name} ==="
         if truncated:
-            block_header += "\n[gemini-bridge] Content truncated for inline transfer"
+            block_header += "\n[gemini-mcp-bridge] Content truncated for inline transfer"
         file_blocks.append(f"{block_header}\n{content}")
 
         if truncated:

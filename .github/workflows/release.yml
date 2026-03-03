@@ -53,13 +53,13 @@ jobs:
           
           ### Installation
           ```bash
-          pip install gemini-bridge
+          pip install gemini-mcp-bridge
           ```
           
           ### Usage
           ```bash
           # Add to Claude Code
-          claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+          claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
           ```
           
           See [README.md](README.md) for full documentation.
@@ -84,5 +84,5 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         # Use Trusted Publishing (no password needed)
-        # Configure at: https://pypi.org/manage/project/gemini-bridge/settings/publishing/
+        # Configure at: https://pypi.org/manage/project/gemini-mcp-bridge/settings/publishing/
         attestations: true

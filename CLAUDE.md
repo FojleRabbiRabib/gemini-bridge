@@ -36,19 +36,19 @@ python -m src
 **Production Installation:**
 ```bash
 # Install from PyPI
-pip install gemini-bridge
+pip install gemini-mcp-bridge
 
 # Or use uvx (recommended)
-uvx gemini-bridge
+uvx gemini-mcp-bridge
 ```
 
 **Claude Code Integration:**
 ```bash
 # Production installation (recommended)
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 
 # Development mode (from local source)
-claude mcp add gemini-bridge -s user -- python -m src
+claude mcp add gemini-mcp-bridge -s user -- python -m src
 ```
 
 ### Testing & Verification
@@ -213,9 +213,9 @@ gemini-bridge/
 - **Python**: Compatible with Python 3.9+
 
 ### Installation Details
-- **Package Name**: `gemini-bridge`
-- **PyPI**: Available as `pip install gemini-bridge`
-- **Entry Point**: `gemini-bridge = "src:main"`
+- **Package Name**: `gemini-mcp-bridge`
+- **PyPI**: Available as `pip install gemini-mcp-bridge`
+- **Entry Point**: `gemini-mcp-bridge = "src:main"`
 - **Module Execution**: `python -m src`
 
 ### Configuration
@@ -229,7 +229,7 @@ Set the `GEMINI_BRIDGE_TIMEOUT` environment variable to customize execution time
 
 ```bash
 # Example: 2-minute timeout for large file analysis
-claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-mcp-bridge
 ```
 
 **Valid Values:**
@@ -259,8 +259,8 @@ claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemi
 - **Release Tags**: Git tags trigger automated PyPI publishing
 
 ### Deployment Options
-1. **PyPI + uvx** (Recommended): `uvx gemini-bridge`
-2. **PyPI + pip**: `pip install gemini-bridge`
+1. **PyPI + uvx** (Recommended): `uvx gemini-mcp-bridge`
+2. **PyPI + pip**: `pip install gemini-mcp-bridge`
 3. **Development**: `python -m src` from source
 
 ### CI/CD Pipeline

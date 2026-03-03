@@ -1,7 +1,7 @@
 # Gemini Bridge
 
 ![CI Status](https://github.com/eLyiN/gemini-bridge/actions/workflows/ci.yml/badge.svg)
-![PyPI Version](https://img.shields.io/pypi/v/gemini-bridge)
+![PyPI Version](https://img.shields.io/pypi/v/gemini-mcp-bridge)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![MCP Compatible](https://img.shields.io/badge/MCP-compatible-green.svg)
@@ -44,10 +44,10 @@ A lightweight MCP (Model Context Protocol) server that enables AI coding assista
 **🎯 Recommended: PyPI Installation**
 ```bash
 # Install from PyPI
-pip install gemini-bridge
+pip install gemini-mcp-bridge
 
 # Add to Claude Code with uvx (recommended)
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 ```
 
 **Alternative: From Source**
@@ -61,7 +61,7 @@ uvx --from build pyproject-build
 pip install dist/*.whl
 
 # Add to Claude Code
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 ```
 
 **Development Installation**
@@ -72,7 +72,7 @@ cd gemini-bridge
 pip install -e .
 
 # Add to Claude Code (development)
-claude mcp add gemini-bridge-dev -s user -- python -m src
+claude mcp add gemini-mcp-bridge-dev -s user -- python -m src
 ```
 
 ## 🌐 Multi-Client Support
@@ -99,10 +99,10 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 
 ```bash
 # Recommended installation
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 
 # Development installation
-claude mcp add gemini-bridge-dev -s user -- python -m src
+claude mcp add gemini-mcp-bridge-dev -s user -- python -m src
 ```
 
 </details>
@@ -114,9 +114,9 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -127,9 +127,9 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -147,10 +147,10 @@ Go to: `Settings` → `Cursor Settings` → `MCP` → `Add new global MCP server
 ```json
 {
   "servers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "type": "stdio",
       "command": "uvx",
-      "args": ["gemini-bridge"]
+      "args": ["gemini-mcp-bridge"]
     }
   }
 }
@@ -159,7 +159,7 @@ Go to: `Settings` → `Cursor Settings` → `MCP` → `Add new global MCP server
 **Alternative: Through Extensions**
 1. Open Extensions view (Ctrl+Shift+X)
 2. Search for MCP extensions
-3. Add custom server with command: `uvx gemini-bridge`
+3. Add custom server with command: `uvx gemini-mcp-bridge`
 
 </details>
 
@@ -170,9 +170,9 @@ Add to your Windsurf MCP configuration:
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -191,9 +191,9 @@ Add to your Windsurf MCP configuration:
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -210,9 +210,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -226,10 +226,10 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 
 1. Navigate to **Settings → MCP Servers → Add Server**
 2. Fill in the server details:
-   - **Name**: `gemini-bridge`
+   - **Name**: `gemini-mcp-bridge`
    - **Type**: `STDIO`
    - **Command**: `uvx`
-   - **Arguments**: `["gemini-bridge"]`
+   - **Arguments**: `["gemini-mcp-bridge"]`
 3. Save the configuration
 
 </details>
@@ -240,7 +240,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 **Using the UI:**
 1. Click hamburger menu → **Settings** → **Tools**
 2. Click **+ Add MCP** button
-3. Enter command: `uvx gemini-bridge`
+3. Enter command: `uvx gemini-mcp-bridge`
 4. Name: **Gemini Bridge**
 
 **Manual Configuration:**
@@ -248,9 +248,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 "augment.advanced": { 
   "mcpServers": [ 
     { 
-      "name": "gemini-bridge", 
+      "name": "gemini-mcp-bridge", 
       "command": "uvx", 
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   ]
@@ -268,9 +268,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -288,7 +288,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "command": "uvx",
-  "args": ["gemini-bridge"],
+  "args": ["gemini-mcp-bridge"],
   "env": {}
 }
 ```
@@ -303,7 +303,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 **For pip-based installations:**
 ```json
 {
-  "command": "gemini-bridge",
+  "command": "gemini-mcp-bridge",
   "args": [],
   "env": {}
 }
@@ -323,7 +323,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "command": "npx",
-  "args": ["gemini-bridge"],
+  "args": ["gemini-mcp-bridge"],
   "env": {}
 }
 ```
@@ -352,7 +352,7 @@ By default, Gemini Bridge uses a 60-second timeout for all CLI operations. For l
 
 ```bash
 # Add with custom timeout (120 seconds)
-claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-mcp-bridge
 ```
 
 </details>
@@ -363,9 +363,9 @@ claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemi
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {
         "GEMINI_BRIDGE_TIMEOUT": "120"
       }
