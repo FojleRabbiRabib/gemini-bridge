@@ -354,7 +354,7 @@ By default, Gemini Bridge uses a 60-second timeout for all CLI operations. For l
 
 ```bash
 # Add with custom timeout (120 seconds)
-claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemini-mcp-bridge
 ```
 
 </details>

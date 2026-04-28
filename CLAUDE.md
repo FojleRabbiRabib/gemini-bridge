@@ -213,7 +213,7 @@ gemini-bridge/
 - **Python**: Compatible with Python 3.9+
 
 ### Installation Details
-- **Package Name**: `gemini-bridge`
+- **Package Name**: `gemini-mcp-bridge`
 - **PyPI**: Available as `pip install gemini-mcp-bridge`
 - **Entry Point**: `gemini-mcp-bridge = "src:main"`
 - **Module Execution**: `python -m src`
