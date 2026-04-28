@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-04-28
+
+### Added
+- **Trust workspace support**: Automatic `--skip-trust` flag for headless/automated environments
+- **GEMINI_BRIDGE_TRUST_WORKSPACE**: Environment variable to control workspace trust (default: true)
+- **GEMINI_BRIDGE_DEFAULT_TIMEOUT**: Environment variable to set default timeout (default: 120 seconds)
+- **GEMINI_BRIDGE_DEFAULT_MODEL**: Environment variable to set default model (default: flash)
+- **Enhanced configurability**: All major options now configurable via environment variables
+- **Comprehensive testing**: 11 new tests covering trust functionality and configuration options
+
+### Changed
+- **Default timeout increased**: 60 seconds → 120 seconds for better large file support
+- **File limits increased**: MAX_INLINE_FILE_COUNT 10→30 files, MAX_INLINE_TOTAL_BYTES 512KB→1MB, MAX_INLINE_FILE_BYTES 256KB→512KB
+- **Error handling**: Resolves "Gemini CLI is not running in a trusted directory" errors in automated environments
+- **Configuration priority**: Environment variables now provide sensible defaults with per-call override capability
+
+### Fixed
+- **Trust workspace errors**: Automatic workspace trust for MCP server usage prevents `FatalUntrustedWorkspaceError`
+- **File attachment limits**: Reduced "Inline file limit reached" warnings with 3x improvement in file count limits
+- **Large file handling**: Better support for analyzing large files with increased timeout and size limits
+
+### Testing
+- **Test coverage**: 45 tests passing with comprehensive coverage of all functionality
+- **New test categories**: Trust workspace, environment variables, file limits, configuration priority
+- **Backward compatibility**: All existing tests updated and passing
+
+### Technical Details
+- Updated command building to include `--skip-trust` flag when TRUST_WORKSPACE=true
+- Enhanced _normalize_model_name() to support DEFAULT_MODEL environment variable
+- Improved _get_timeout() to use DEFAULT_TIMEOUT instead of hardcoded 60 seconds
+- All changes maintain full backward compatibility with existing functionality
+
 ## [1.3.0] - 2026-03-03
 
 ### Added
