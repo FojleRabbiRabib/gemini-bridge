@@ -228,7 +228,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 
 1. Navigate to **Settings → MCP Servers → Add Server**
 2. Fill in the server details:
-   - **Name**: `gemini-bridge`
+   - **Name**: `gemini-mcp-bridge`
    - **Type**: `STDIO`
    - **Command**: `uvx`
    - **Arguments**: `["gemini-mcp-bridge"]`
@@ -242,7 +242,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 **Using the UI:**
 1. Click hamburger menu → **Settings** → **Tools**
 2. Click **+ Add MCP** button
-3. Enter command: `uvx gemini-bridge`
+3. Enter command: `uvx gemini-mcp-bridge`
 4. Name: **Gemini Bridge**
 
 **Manual Configuration:**
