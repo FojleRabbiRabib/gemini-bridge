@@ -190,8 +190,9 @@ Special thanks to all contributors who made this release possible:
 
 ## Links
 
-- **Repository**: [https://github.com/shelakh/gemini-bridge](https://github.com/shelakh/gemini-bridge)
-- **Issues**: [https://github.com/shelakh/gemini-bridge/issues](https://github.com/shelakh/gemini-bridge/issues)
+- **Repository**: [https://github.com/FojleRabbiRabib/gemini-bridge](https://github.com/FojleRabbiRabib/gemini-bridge)
+- **Issues**: [https://github.com/FojleRabbiRabib/gemini-bridge/issues](https://github.com/FojleRabbiRabib/gemini-bridge/issues)
+- **Original Project**: [https://github.com/eLyiN/gemini-bridge](https://github.com/eLyiN/gemini-bridge)
 - **MCP Protocol**: [https://modelcontextprotocol.io/](https://modelcontextprotocol.io/)
 - **Gemini CLI**: [https://www.npmjs.com/package/@google/gemini-cli](https://www.npmjs.com/package/@google/gemini-cli)
 ## [1.1.1] - 2025-09-05

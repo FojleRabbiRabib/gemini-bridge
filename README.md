@@ -1,11 +1,13 @@
-# Gemini Bridge
+# Gemini MCP Bridge
 
-![CI Status](https://github.com/eLyiN/gemini-bridge/actions/workflows/ci.yml/badge.svg)
-![PyPI Version](https://img.shields.io/pypi/v/gemini-bridge)
+![CI Status](https://github.com/FojleRabbiRabib/gemini-bridge/actions/workflows/ci.yml/badge.svg)
+![PyPI Version](https://img.shields.io/pypi/v/gemini-mcp-bridge)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![MCP Compatible](https://img.shields.io/badge/MCP-compatible-green.svg)
 ![Gemini CLI](https://img.shields.io/badge/Gemini-CLI-blue.svg)
+
+> **Forked from [eLyiN/gemini-bridge](https://github.com/eLyiN/gemini-bridge)** - This is a customized fork of the original Gemini Bridge project, rebranded as "Gemini MCP Bridge" for distinct package identity.
 
 A lightweight MCP (Model Context Protocol) server that enables AI coding assistants to interact with Google's Gemini AI through the official CLI. Works with Claude Code, Cursor, VS Code, and other MCP-compatible clients. Designed for simplicity, reliability, and seamless integration.
 
@@ -44,16 +46,16 @@ A lightweight MCP (Model Context Protocol) server that enables AI coding assista
 **🎯 Recommended: PyPI Installation**
 ```bash
 # Install from PyPI
-pip install gemini-bridge
+pip install gemini-mcp-bridge
 
 # Add to Claude Code with uvx (recommended)
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 ```
 
 **Alternative: From Source**
 ```bash
 # Clone the repository
-git clone https://github.com/shelakh/gemini-bridge.git
+git clone https://github.com/FojleRabbiRabib/gemini-bridge.git
 cd gemini-bridge
 
 # Build and install locally
@@ -61,18 +63,18 @@ uvx --from build pyproject-build
 pip install dist/*.whl
 
 # Add to Claude Code
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 ```
 
 **Development Installation**
 ```bash
 # Clone and install in development mode
-git clone https://github.com/shelakh/gemini-bridge.git
+git clone https://github.com/FojleRabbiRabib/gemini-bridge.git
 cd gemini-bridge
 pip install -e .
 
 # Add to Claude Code (development)
-claude mcp add gemini-bridge-dev -s user -- python -m src
+claude mcp add gemini-mcp-bridge-dev -s user -- python -m src
 ```
 
 ## 🌐 Multi-Client Support
@@ -99,10 +101,10 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 
 ```bash
 # Recommended installation
-claude mcp add gemini-bridge -s user -- uvx gemini-bridge
+claude mcp add gemini-mcp-bridge -s user -- uvx gemini-mcp-bridge
 
 # Development installation
-claude mcp add gemini-bridge-dev -s user -- python -m src
+claude mcp add gemini-mcp-bridge-dev -s user -- python -m src
 ```
 
 </details>
@@ -114,9 +116,9 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -127,9 +129,9 @@ claude mcp add gemini-bridge-dev -s user -- python -m src
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -147,10 +149,10 @@ Go to: `Settings` → `Cursor Settings` → `MCP` → `Add new global MCP server
 ```json
 {
   "servers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "type": "stdio",
       "command": "uvx",
-      "args": ["gemini-bridge"]
+      "args": ["gemini-mcp-bridge"]
     }
   }
 }
@@ -159,7 +161,7 @@ Go to: `Settings` → `Cursor Settings` → `MCP` → `Add new global MCP server
 **Alternative: Through Extensions**
 1. Open Extensions view (Ctrl+Shift+X)
 2. Search for MCP extensions
-3. Add custom server with command: `uvx gemini-bridge`
+3. Add custom server with command: `uvx gemini-mcp-bridge`
 
 </details>
 
@@ -170,9 +172,9 @@ Add to your Windsurf MCP configuration:
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -191,9 +193,9 @@ Add to your Windsurf MCP configuration:
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -210,9 +212,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -229,7 +231,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
    - **Name**: `gemini-bridge`
    - **Type**: `STDIO`
    - **Command**: `uvx`
-   - **Arguments**: `["gemini-bridge"]`
+   - **Arguments**: `["gemini-mcp-bridge"]`
 3. Save the configuration
 
 </details>
@@ -248,9 +250,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 "augment.advanced": { 
   "mcpServers": [ 
     { 
-      "name": "gemini-bridge", 
+      "name": "gemini-mcp-bridge", 
       "command": "uvx", 
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   ]
@@ -268,9 +270,9 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {}
     }
   }
@@ -288,7 +290,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "command": "uvx",
-  "args": ["gemini-bridge"],
+  "args": ["gemini-mcp-bridge"],
   "env": {}
 }
 ```
@@ -303,7 +305,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 **For pip-based installations:**
 ```json
 {
-  "command": "gemini-bridge",
+  "command": "gemini-mcp-bridge",
   "args": [],
   "env": {}
 }
@@ -323,7 +325,7 @@ Go to: `Settings` → `MCP` → `Add MCP Server`
 ```json
 {
   "command": "npx",
-  "args": ["gemini-bridge"],
+  "args": ["gemini-mcp-bridge"],
   "env": {}
 }
 ```
@@ -363,9 +365,9 @@ claude mcp add gemini-bridge -s user --env GEMINI_BRIDGE_TIMEOUT=120 -- uvx gemi
 ```json
 {
   "mcpServers": {
-    "gemini-bridge": {
+    "gemini-mcp-bridge": {
       "command": "uvx",
-      "args": ["gemini-bridge"],
+      "args": ["gemini-mcp-bridge"],
       "env": {
         "GEMINI_BRIDGE_TIMEOUT": "120"
       }
@@ -580,10 +582,13 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ## 🆘 Support
 
-- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/shelakh/gemini-bridge/issues)
-- **Discussions**: Join the community discussion
+- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/FojleRabbiRabib/gemini-bridge/issues)
+- **Original Project**: For upstream issues, visit [eLyiN/gemini-bridge](https://github.com/eLyiN/gemini-bridge)
 - **Documentation**: Additional docs can be created in the `docs/` directory
 
 ---
+
+**Original Author**: [Shelakh](https://github.com/shelakh) - Creator of Gemini Bridge
+**Fork Maintainer**: [Fojle Rabbi (Rabib)](https://github.com/FojleRabbiRabib) - Maintainer of Gemini MCP Bridge fork
 
 **Focus**: A simple, reliable bridge between Claude Code and Gemini AI through the official CLI.

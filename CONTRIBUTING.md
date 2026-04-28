@@ -1,6 +1,6 @@
-# Contributing to Gemini Bridge
+# Contributing to Gemini MCP Bridge
 
-Thank you for your interest in contributing to Gemini Bridge! We welcome contributions from the community and are excited to work with you.
+Thank you for your interest in contributing to Gemini MCP Bridge! This is a fork of the original [Gemini Bridge](https://github.com/eLyiN/gemini-bridge) project by [Shelakh](https://github.com/shelakh). We welcome contributions to this fork and appreciate your interest.
 
 ## 🚀 Getting Started
 
@@ -257,7 +257,9 @@ Contributors are recognized in:
 - CHANGELOG.md for significant contributions
 - Special mentions for major features or fixes
 
-Thank you for contributing to Gemini Bridge! Your contributions help make this tool better for the entire community.
+Thank you for contributing to Gemini MCP Bridge! Your contributions help make this tool better for the entire community.
+
+**Note**: This is a fork of the original [Gemini Bridge](https://github.com/eLyiN/gemini-bridge) project. For contributing to the upstream project, please visit the original repository.
 
 ---
 

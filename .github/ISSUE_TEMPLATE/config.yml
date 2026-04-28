@@ -1,11 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 General Discussion
-    url: https://github.com/shelakh/gemini-bridge/discussions
+    url: https://github.com/FojleRabbiRabib/gemini-bridge/discussions
     about: Ask questions, share ideas, or discuss the project with the community
   - name: 📚 Documentation
-    url: https://github.com/shelakh/gemini-bridge/blob/main/README.md
+    url: https://github.com/FojleRabbiRabib/gemini-bridge/blob/main/README.md
     about: Check the README and other documentation for usage information
   - name: 🔒 Security Issues
-    url: https://github.com/shelakh/gemini-bridge/security/advisories/new
+    url: https://github.com/FojleRabbiRabib/gemini-bridge/security/advisories/new
     about: Report security vulnerabilities privately (do not use public issues)
+  - name: 🔗 Original Project
+    url: https://github.com/eLyiN/gemini-bridge
+    about: Visit the original Gemini Bridge project for upstream issues and discussions
